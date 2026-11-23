@@ -1,6 +1,8 @@
 import { checkWordExists, getErrorMessage } from '../services/wordApi';
 import { cleanWord, getFirstLetter, getLastLetter, isSingleWord, toComparable } from './words';
 
+export const TURN_SECONDS = 15;
+
 export type Rejection =
   | { reason: 'empty' }
   | { reason: 'invalid-format' }
