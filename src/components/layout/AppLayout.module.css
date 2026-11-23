@@ -7,7 +7,6 @@
   overflow-x: clip;
 }
 
-/* Fondo fijo: brillos de color, una grilla sutil y dos luces que flotan. */
 .background {
   position: fixed;
   inset: 0;
@@ -82,7 +81,6 @@
   padding: 14px var(--gutter);
 }
 
-/* Centra el contenido de cada pantalla en el alto disponible. */
 .main {
   display: flex;
   flex: 1;

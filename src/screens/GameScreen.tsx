@@ -7,7 +7,6 @@ interface GameScreenProps {
   onExit: () => void;
 }
 
-// Esqueleto de la pantalla de partida: el juego se arma en los próximos pasos.
 export const GameScreen = ({ onExit }: GameScreenProps) => (
   <section className={styles.screen} aria-labelledby="game-title">
     <Panel className={styles.placeholder}>

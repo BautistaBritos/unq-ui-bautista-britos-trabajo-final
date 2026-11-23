@@ -8,9 +8,7 @@ type ButtonSize = 'md' | 'lg';
 interface ButtonProps extends ComponentProps<'button'> {
   variant?: ButtonVariant;
   size?: ButtonSize;
-  /** Ícono antes del texto. */
   startIcon?: ReactNode;
-  /** Ícono después del texto (se desplaza un poco al pasar el mouse). */
   endIcon?: ReactNode;
 }
 

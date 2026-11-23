@@ -9,7 +9,6 @@ interface PanelProps {
   children: ReactNode;
 }
 
-/** Tarjeta translúcida sobre el fondo oscuro: la base visual de los bloques del juego. */
 export const Panel = ({ as: Component = 'div', className, style, children }: PanelProps) => (
   <Component className={cx(styles.panel, className)} style={style}>
     {children}

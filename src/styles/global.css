@@ -1,5 +1,3 @@
-/* Estilos globales: paleta, tipografías y reset. Los estilos de cada componente van en su CSS Module. */
-
 :root {
   /* Paleta */
   --color-bg: #0a0920;
@@ -100,7 +98,6 @@ button {
   background: rgba(255, 61, 127, 0.4);
 }
 
-/* Respeta a quien prefiere menos movimiento en pantalla. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

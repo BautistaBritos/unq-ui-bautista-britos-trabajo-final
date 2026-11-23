@@ -8,7 +8,7 @@ El objetivo es formar la cadena más larga posible de palabras válidas antes de
 
 - [Node.js](https://nodejs.org/) 20.19 o superior (incluye npm).
 - [Git](https://git-scm.com/).
-- Conexión a internet: las palabras se validan con la API de la cátedra (`https://word-api-hmlg.vercel.app`).
+- Conexión a internet: las palabras se validan con una API externa (`https://word-api-hmlg.vercel.app`).
 
 ## Cómo descargar e instalar el proyecto
 
@@ -26,17 +26,10 @@ npm run dev
 
 Después abrí en el navegador la URL que aparece en la terminal (por defecto `http://localhost:5173`).
 
-## Otros comandos
-
-| Comando           | Qué hace                                              |
-| ----------------- | ----------------------------------------------------- |
-| `npm run build`   | Genera la versión de producción en la carpeta `dist`. |
-| `npm run preview` | Sirve localmente la versión generada con `build`.     |
-| `npm run lint`    | Revisa el código con oxlint.                          |
-
 ## Tecnologías
 
 - React 19 con TypeScript.
 - Vite.
 - CSS Modules.
+- axios para las consultas a la API.
 - [lucide-react](https://lucide.dev/) para los íconos y [Fontsource](https://fontsource.org/) para las tipografías (Outfit y Bebas Neue).

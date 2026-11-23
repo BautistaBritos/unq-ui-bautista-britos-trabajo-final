@@ -33,7 +33,6 @@
   box-shadow: var(--shadow-glow-pink);
 }
 
-/* Brillo que cruza el botón al pasar el mouse. */
 .primary::after {
   content: '';
   position: absolute;

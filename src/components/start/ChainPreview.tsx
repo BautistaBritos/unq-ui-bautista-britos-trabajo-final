@@ -3,11 +3,9 @@ import { ArrowRight } from 'lucide-react';
 import { cx } from '../../utils/classNames';
 import styles from './ChainPreview.module.css';
 
-// Mismo ejemplo que el enunciado.
 const EXAMPLE_CHAIN = ['casa', 'árbol', 'luna'];
 const STAGGER_MS = 180;
 
-/** Ejemplo animado de una cadena, con las letras que unen cada palabra resaltadas. */
 export const ChainPreview = () => (
   <ol className={styles.chain} aria-label={`Ejemplo de cadena: ${EXAMPLE_CHAIN.join(', ')}`}>
     {EXAMPLE_CHAIN.map((word, wordIndex) => {
