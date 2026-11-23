@@ -1,0 +1,103 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+/* Fondo fijo: brillos de color, una grilla sutil y dos luces que flotan. */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 10% -10%, rgba(255, 61, 127, 0.22), transparent 60%),
+    radial-gradient(50rem 40rem at 110% 110%, rgba(59, 107, 255, 0.25), transparent 60%),
+    var(--color-bg);
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 30%, #000000 20%, transparent 75%);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.4;
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+.orbPink {
+  top: 12%;
+  left: -7rem;
+  width: 22rem;
+  height: 22rem;
+  background: var(--color-pink);
+}
+
+.orbPurple {
+  right: -8rem;
+  bottom: -8rem;
+  width: 26rem;
+  height: 26rem;
+  background: var(--color-purple);
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  to {
+    transform: translate3d(3rem, -2rem, 0) scale(1.1);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10, 9, 32, 0.6);
+  border-bottom: 1px solid var(--color-border);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 14px var(--gutter);
+}
+
+/* Centra el contenido de cada pantalla en el alto disponible. */
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 40px var(--gutter) 56px;
+}
+
+.footer {
+  padding: 20px var(--gutter);
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}

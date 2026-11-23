@@ -1,0 +1,31 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow-pink);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  padding-top: 3px;
+}
+
+.accent {
+  color: transparent;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

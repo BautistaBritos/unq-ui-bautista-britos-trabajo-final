@@ -1,0 +1,68 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  animation: fade-up 0.6s ease both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ff8fb5;
+  background-color: rgba(255, 61, 127, 0.12);
+  border: 1px solid rgba(255, 61, 127, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, min(17vw, 14vh), 9rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+}
+
+.titleAccent {
+  color: transparent;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 6px 24px rgba(255, 61, 127, 0.35));
+}
+
+.subtitle {
+  max-width: 40rem;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  color: var(--color-text-muted);
+}
+
+.startButton {
+  margin-top: 8px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
